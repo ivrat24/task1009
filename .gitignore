@@ -19,17 +19,18 @@ Thumbs.db
 *.parquet.metadata
 *.lock
 
-# Full SWE-chat payloads (too large for GitHub; re-import locally)
+# Raw SWE-chat payloads (re-download if needed)
 data/raw/parquet/
 data/raw/transcripts/
 data/raw/.cache/
-data/cleaned/sessions.jsonl
-data/cleaned/sessions.js
 data/cleaned_backup_*/
+
+# Ignore bulky session dumps by default…
 **/sessions.jsonl
 **/sessions.js
-!**/sessions_sample100.jsonl
-!**/sessions_sample100.js
+# …but keep the active 500-session cleaned corpus for this repo
+!data/cleaned/sessions.jsonl
+!data/cleaned/sessions.js
 
 # Local download / import logs
 data/*.log
