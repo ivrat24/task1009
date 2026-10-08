@@ -1,0 +1,13 @@
+IR-02 完整转移包（含全库）
+
+内容：打标界�?+ vendor + data\cleaned\sessions.jsonl（全库约 5795 会话�?
+
+使用�?
+  2) 打开 http://127.0.0.1:8765/annotator/
+  3) 页面会流式加载全库（需等待解析完成�?
+
+标注进度�?
+  - 转移前请点「导出我的标注」，�?JSON 放进 labels\
+  - 新机器「导入标注」恢�?
+
+未包�?sessions.js（与 jsonl 重复且约 140MB）；界面默认�?sessions.jsonl�?

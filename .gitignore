@@ -1,0 +1,41 @@
+# Secrets / local env
+.env
+.env.*
+*.pem
+*.key
+
+# Python / OS
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+
+# Hugging Face / download caches
+.cache/
+**/.cache/
+*.parquet
+*.parquet.metadata
+*.lock
+
+# Full SWE-chat payloads (too large for GitHub; re-import locally)
+data/raw/parquet/
+data/raw/transcripts/
+data/raw/.cache/
+data/cleaned/sessions.jsonl
+data/cleaned/sessions.js
+data/cleaned_backup_*/
+**/sessions.jsonl
+**/sessions.js
+!**/sessions_sample100.jsonl
+!**/sessions_sample100.js
+
+# Local download / import logs
+data/*.log
+
+# Optional local label dumps (keep README)
+labels/*.json
+labels/*.jsonl
+labels/*.xlsx
+!labels/README.txt

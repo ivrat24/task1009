@@ -1,0 +1,9 @@
+IR-02 portable annotator
+
+1) Double-click START.bat
+2) Open http://127.0.0.1:8765/annotator/
+3) Before moving machines: click "导出标注" and keep the JSON under labels\
+4) On the new machine: click "导入标注" to restore progress
+
+Offline: KaTeX / marked / xlsx are under annotator\vendor\ (no CDN needed).
+Full corpus (optional): copy data\cleaned\sessions.jsonl separately if needed.

@@ -1,0 +1,602 @@
+[
+  {
+    "session_id": "5ef41a79-05a0-4f22-b832-30a1306cb6a4",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 4
+  },
+  {
+    "session_id": "b4b45be7-3c1f-4d1a-8109-1e20af582e41",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 18,
+    "turn_count": 36
+  },
+  {
+    "session_id": "682de44d-308a-4fc9-b3f7-34e944f0c071",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 11
+  },
+  {
+    "session_id": "81d820ab-aae3-4779-b837-2c2f124324fe",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "4294a5e3-385b-40c0-bee9-90c2eca56689",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 4
+  },
+  {
+    "session_id": "104eabfa-edd8-4300-a9ac-d17a136d563c",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 9
+  },
+  {
+    "session_id": "cc04f222-d475-457c-9c28-3d6f624b3e31",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 8
+  },
+  {
+    "session_id": "cf91080d-3955-46af-ac8b-fcfd8f24f289",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 13,
+    "turn_count": 22
+  },
+  {
+    "session_id": "3e105417-3983-4566-a9d9-585b74419288",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 3
+  },
+  {
+    "session_id": "fdd49a8e-d936-4a3f-99fd-d1ce23f3b09c",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 30,
+    "turn_count": 50
+  },
+  {
+    "session_id": "aa88f58c-c3f6-4b35-9125-e4fa75831cce",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 13
+  },
+  {
+    "session_id": "4afd0061-44c7-4e37-aaac-72870a80071f",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 15,
+    "turn_count": 27
+  },
+  {
+    "session_id": "df93cd9c-8436-49e5-af80-61126ae55a83",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "ses_3255a6dc6ffdMCXSlgS54AkYg2",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "2261279e-baca-4c00-9af7-1a24fd171ae5",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 10,
+    "turn_count": 13
+  },
+  {
+    "session_id": "c9de2d74-440d-4cc7-a4eb-9abcfa1a6bac",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 7,
+    "turn_count": 14
+  },
+  {
+    "session_id": "23bbbe0f-ba88-46ac-858f-c442a33310d7",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 6
+  },
+  {
+    "session_id": "5e7c667b-338d-4f8c-bca6-021cdee525c0",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 10
+  },
+  {
+    "session_id": "4e17c78f-01de-4fcd-a805-a8bc5dc63469",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "23bd02ee-e611-4488-a3d4-71ca93985943",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "bc1cba24-23b5-4812-a35c-18398a77c21d",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 11,
+    "turn_count": 13
+  },
+  {
+    "session_id": "d59b5989-c929-4fa2-95a0-bbdf5b0e0870",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 9,
+    "turn_count": 18
+  },
+  {
+    "session_id": "92a1730c-431e-43a1-a0c2-e227930a4186",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 4
+  },
+  {
+    "session_id": "07e3ff4a-f155-49b0-ae62-7f8f248695cf",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 15
+  },
+  {
+    "session_id": "9a6fcd2a-b956-4e75-92f4-ec40f93190e6",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 13,
+    "turn_count": 20
+  },
+  {
+    "session_id": "bc17869f-f2b7-4aa6-a08b-802e93c0fc64",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 6
+  },
+  {
+    "session_id": "979aebde-b309-471c-82aa-f59ad7a050e3",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 5,
+    "turn_count": 10
+  },
+  {
+    "session_id": "fa3973f6-465e-4cbf-8d38-2fe34cfcf47c",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "ses_3293f4e3fffeNOabxVK3le56XE",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 5
+  },
+  {
+    "session_id": "545831c3-f1bb-402d-b3f0-dce48fb6bfb2",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 6
+  },
+  {
+    "session_id": "d9e2d245-5440-4366-8b04-58b39fdf8a47",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 4
+  },
+  {
+    "session_id": "b5ba8f62-2cd6-4886-8c94-1147c9f4f4fb",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 24
+  },
+  {
+    "session_id": "8b897c12-cdd2-4a64-aa3b-d9639cb641be",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 10,
+    "turn_count": 19
+  },
+  {
+    "session_id": "019d9859-2e65-7293-94ba-9abf48adb7f9",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 10,
+    "turn_count": 10
+  },
+  {
+    "session_id": "b00f8ed0-6e10-46c8-ab25-46a9d3f3bf1a",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 7
+  },
+  {
+    "session_id": "ses_338bf25f3ffeUz6ivyWw5Sm4uL",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 6
+  },
+  {
+    "session_id": "be99a6a1-e1f2-46f8-b517-2f42d8f6fc82",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 3
+  },
+  {
+    "session_id": "b0482c3c-e061-4a5c-b75d-093c973ac2e1",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 5,
+    "turn_count": 10
+  },
+  {
+    "session_id": "ed115cdd-ca37-4fd6-b005-2439eb39dacb",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 11,
+    "turn_count": 14
+  },
+  {
+    "session_id": "d4dc5a49-1a2f-4d53-924b-cb5dc6eab247",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 18,
+    "turn_count": 30
+  },
+  {
+    "session_id": "63669ecd-7cc8-41f6-ac69-c0b2f31e3c01",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 19,
+    "turn_count": 34
+  },
+  {
+    "session_id": "8268563e-7099-4b74-a85e-f55af754cbf8",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 8
+  },
+  {
+    "session_id": "dc4ca47f-a775-4b76-ba67-74fc7654a9e3",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 13,
+    "turn_count": 24
+  },
+  {
+    "session_id": "150b5a07-332a-4d7e-a937-a15c328de4c1",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 19,
+    "turn_count": 29
+  },
+  {
+    "session_id": "a93e627f-3506-475b-b455-4aeda9926794",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 5
+  },
+  {
+    "session_id": "7e5d7df5-d5cd-4aca-aa52-1e71a11c1ac1",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 5
+  },
+  {
+    "session_id": "ses_32a928c3effe0tctPe01pdlVLz",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 7,
+    "turn_count": 10
+  },
+  {
+    "session_id": "09c156ba-df0a-45ab-b979-4a1c62eddc13",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 22,
+    "turn_count": 43
+  },
+  {
+    "session_id": "38f6cea6-6916-47c9-bf4c-02ddc3894ef6",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 7,
+    "turn_count": 12
+  },
+  {
+    "session_id": "85fe66f3-86e4-47c7-94f7-e35ff0d525d9",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 14,
+    "turn_count": 23
+  },
+  {
+    "session_id": "0371bf9a-f4b2-407f-a165-e42f5dd671c4",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "37a27d31-4a70-427b-8518-5fad6045d347",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 12
+  },
+  {
+    "session_id": "8016a255-0828-4a01-ae11-a955eebf2fb8",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 12,
+    "turn_count": 22
+  },
+  {
+    "session_id": "dfc8e736-60fc-4eb2-88a2-a915b0b68900",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 12
+  },
+  {
+    "session_id": "c8411758-cd5a-4422-b783-7ef4c7eb0734",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "0e818656-46dd-4357-83f8-afce5b4edc6f",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 6
+  },
+  {
+    "session_id": "ses_3165ecbeaffeZSsbUKpHJ6m2s6",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "5d70c437-3168-4c82-86d1-46b5790e02d3",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 19,
+    "turn_count": 32
+  },
+  {
+    "session_id": "25148b72-779a-4b61-b6da-b78c2d8e69ee",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 5
+  },
+  {
+    "session_id": "76beb79f-6bc7-43c0-a87a-612aba368c74",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "2026-01-05-4555072a-e039-4937-b6ea-dcb86152dd55",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 5,
+    "turn_count": 10
+  },
+  {
+    "session_id": "f8ab9b4c-c93f-4dac-b340-9c7b7c7b04c7",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 14
+  },
+  {
+    "session_id": "49ab5e4b-d823-46cb-a216-6d50ed366a78",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 6
+  },
+  {
+    "session_id": "ses_30923b961ffeNT0MbjVtd2LiNf",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 17,
+    "turn_count": 34
+  },
+  {
+    "session_id": "ses_3094e43ffffejNm9Jp0ONrP2xg",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "2026-01-20-86cc3044-7515-43f1-9c25-1444738c64c9",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 5,
+    "turn_count": 10
+  },
+  {
+    "session_id": "a4bd6af4-28d0-4000-aa6b-4a0a1763a66b",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 8
+  },
+  {
+    "session_id": "44c31ef1-d376-4ca2-ae23-b7b6ad131e53",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 27,
+    "turn_count": 37
+  },
+  {
+    "session_id": "02681a80-3681-4157-a296-ffcb601f5aa2",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 5
+  },
+  {
+    "session_id": "4647c45d-0862-41eb-8eb4-f920ae54f1b4",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 7,
+    "turn_count": 11
+  },
+  {
+    "session_id": "719209d6-cf47-49f3-a555-89d27b610c0d",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 6,
+    "turn_count": 14
+  },
+  {
+    "session_id": "88c65864-3f29-4b06-bbe1-7fab0c4a0142",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "94721c6d-b20d-46b5-bed2-b54d83a5695d",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 29,
+    "turn_count": 51
+  },
+  {
+    "session_id": "3a251487-01f2-4e80-b7f6-ba87b1772933",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 14
+  },
+  {
+    "session_id": "f3cd0a48-aacb-4615-b59d-ecc4fc6a1c46",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 7,
+    "turn_count": 16
+  },
+  {
+    "session_id": "ses_3357475cfffeopEj3XQHD5LXqo",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "ses_335e76ca1ffe7P0y3TFDXoXGIs",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "f1e854a0-dad7-4736-9cc5-eca4ff6cdf55",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "debf8bba-81b9-4581-8f65-dd68c9dc86e3",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 5
+  },
+  {
+    "session_id": "ab3e6d31-8996-4ec6-a9af-0054426fa785",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "b3d89cc2-c6b8-4fff-89e3-e7501c7a45ee",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 5
+  },
+  {
+    "session_id": "72557f18-483f-4d2b-b5ad-642253d41b88",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 13,
+    "turn_count": 19
+  },
+  {
+    "session_id": "607cd983-b821-49ed-b756-c9fa5e8d9f34",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 5,
+    "turn_count": 10
+  },
+  {
+    "session_id": "5dd5fba1-4664-4333-84d2-4bd20d4114c4",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 15,
+    "turn_count": 27
+  },
+  {
+    "session_id": "019d7a87-9d1d-7021-abb1-7221e341ea94",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 12,
+    "turn_count": 12
+  },
+  {
+    "session_id": "3a0d6abe-a088-44ee-affe-e84d4a2975fb",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 4,
+    "turn_count": 8
+  },
+  {
+    "session_id": "20ad60c8-f1a0-40e9-83f4-cdd6b66d3585",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 10,
+    "turn_count": 19
+  },
+  {
+    "session_id": "b85afdfc-ba44-4a08-bd97-e70ba119b5f6",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "27761a3e-ccfa-40c2-8ce7-b7fba58263d2",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 4
+  },
+  {
+    "session_id": "50b26ae4-a1ec-489c-8b9f-43ed1ca35169",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 3
+  },
+  {
+    "session_id": "ses_343262563ffeQ60nBG30A9Kxje",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 8
+  },
+  {
+    "session_id": "ses_332b2b376ffe6qYLp2OOsUBSTu",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 2,
+    "turn_count": 3
+  },
+  {
+    "session_id": "b6b20c21-d3cb-42a4-9a55-bb2dbb2212e4",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 17,
+    "turn_count": 28
+  },
+  {
+    "session_id": "a19414f3-6176-45a5-a923-13d1b9e61758",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 13,
+    "turn_count": 24
+  },
+  {
+    "session_id": "ses_32af2d6cbffeHsKEpMDhYx90RT",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 9
+  },
+  {
+    "session_id": "16d5bd80-c985-402f-9981-0ab621c90ca7",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 9,
+    "turn_count": 16
+  },
+  {
+    "session_id": "183e95d4-cfaa-4125-91b4-6754a94a9771",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 13
+  },
+  {
+    "session_id": "a0c24e4b-5b76-4942-a797-5d1ac4d9326c",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 8,
+    "turn_count": 12
+  },
+  {
+    "session_id": "25c32fe0-d5fa-4ed5-bddf-8c230de5b05e",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 6
+  },
+  {
+    "session_id": "b8038f42-1ed7-418b-acc5-ef9a67f786ac",
+    "source_file": "conversations.parquet",
+    "user_prompt_count": 3,
+    "turn_count": 5
+  }
+]

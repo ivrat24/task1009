@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IR-02 · User Prompt 意图打标（双人双机）</title>
+  <!-- All assets are local under ./vendor for offline / portable transfer -->
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=6" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>IR-02 · User Prompt 意图打标</h1>
+        <div class="sub" id="status">载入中…</div>
+      </div>
+      <div class="tools">
+        <label>标注员
+          <select id="annotator" title="A/B 分槽保存在本机；gold 用于共识金标">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="gold">gold</option>
+          </select>
+        </label>
+        <label>机器 ID
+          <input id="machine-id" type="text" maxlength="24" placeholder="如 desk-A" title="区分两台电脑，写入导出文件名与 JSON" />
+        </label>
+        <label>任务范围
+          <select id="work-scope" title="双人分片：按 session_id 稳定分给 A/B">
+            <option value="mine">仅我的分片</option>
+            <option value="all">全部会话</option>
+            <option value="other">仅对方分片（只读浏览）</option>
+          </select>
+        </label>
+        <input id="file" type="file" accept=".json,.jsonl,.js,.txt" multiple title="导入 cleaned sessions 或原始 conversation JSONL" />
+        <input id="labels-file" type="file" accept=".json" title="导入标注状态 JSON" style="display:none" />
+        <input id="peer-file" type="file" accept=".json" title="导入对方标注 JSON（对比）" style="display:none" />
+        <button id="import-labels" type="button" title="合并进当前标注员槽位">导入/合并标注</button>
+        <button id="import-peer" type="button" title="载入对方文件，不覆盖本机槽位">导入对方(对比)</button>
+        <button id="compare-ab" type="button" title="对比本机当前槽与已导入的对方标注">一致性</button>
+        <button id="export-labels" type="button" title="双机交接：保存本机进度 JSON">导出标注</button>
+        <button id="export-xlsx" class="primary" type="button">导出 Excel</button>
+        <button id="export-jsonl" type="button">导出 JSONL</button>
+      </div>
+    </header>
+
+    <div class="collab-bar" id="collab-bar">
+      <span id="collab-summary">双人双机模式</span>
+      <span class="grow"></span>
+      <button id="copy-handoff" type="button" class="chip-btn">复制交接说明</button>
+    </div>
+
+    <div class="workspace">
+      <section class="left-stack">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>会话</h2>
+            <div class="row" style="margin:0">
+              <button id="prev-session" class="chip-btn" type="button">上会话 [</button>
+              <button id="next-session" class="chip-btn" type="button">下会话 ]</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="filters">
+              <select id="filter">
+                <option value="all">全部会话</option>
+                <option value="unlabeled">含未标注</option>
+                <option value="labeled">已全部标注</option>
+              </select>
+              <input id="search" type="search" placeholder="搜索 session / 文件名" />
+            </div>
+            <div id="session-list" class="session-list"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>本会话 User prompts</h2></div>
+          <div class="panel-body"><div id="prompt-list" class="prompt-list"></div></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>意图分类</h2>
+            <label class="row" style="margin:0; font-size:12px; color:#666">
+              <input id="render-math" type="checkbox" checked /> 渲染 Markdown/LaTeX
+            </label>
+          </div>
+          <div class="panel-body" id="label-panel"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="nav-strip">
+          <button id="prev-prompt" type="button">上一条</button>
+          <button id="next-prompt" type="button">下一条</button>
+          <button id="next-unlabeled" class="primary" type="button">下一条未标注</button>
+          <label class="row" style="margin:0"><input id="focus-current" type="checkbox" checked /> 只看当前完整 prompt</label>
+          <label class="row" style="margin:0"><input id="hide-nonuser" type="checkbox" /> 只看 User</label>
+          <span class="grow"></span>
+          <span class="progress" id="progress"></span>
+        </div>
+        <div class="thread" id="thread"></div>
+      </section>
+    </div>
+  </div>
+
+  <dialog id="compare-dialog">
+    <form method="dialog" class="compare-card">
+      <h3>A/B 一致性报告</h3>
+      <pre id="compare-body"></pre>
+      <menu>
+        <button value="ok" class="primary">关闭</button>
+        <button id="export-disagree" type="button">导出分歧 JSONL</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="./vendor/katex/katex.min.js?v=2"></script>
+  <script src="./vendor/katex/auto-render.min.js?v=2"></script>
+  <script src="./vendor/marked.min.js?v=2"></script>
+  <script src="./vendor/xlsx.full.min.js?v=2"></script>
+  <!-- Default: 100-session sample (full sessions.js ~140MB will freeze browsers) -->
+  <script src="../data/cleaned/sessions_sample100.js?v=2"></script>
+  <script src="./taxonomy.js?v=2"></script>
+  <script src="./app.js?v=6"></script>
+</body>
+</html>

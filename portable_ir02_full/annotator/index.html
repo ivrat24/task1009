@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IR-02 · User Prompt 意图打标（双人双机）</title>
+  <!-- All assets are local under ./vendor for offline / portable transfer -->
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=12" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>IR-02 · User Prompt 意图打标</h1>
+      <div class="tools">
+        <div class="tool-group">
+          <label>标注员
+            <select id="annotator" title="A/B 分槽保存在本机；gold 用于共识金标">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="gold">gold</option>
+            </select>
+          </label>
+          <label>范围
+            <select id="work-scope" title="按 session_id 稳定分片：只标注自己的分片">
+              <option value="mine">仅我的分片</option>
+              <option value="all">全部会话</option>
+            </select>
+          </label>
+        </div>
+        <div class="tool-group">
+          <input id="file" type="file" accept=".json,.jsonl,.js,.txt" multiple title="导入 cleaned sessions 或原始 conversation JSONL（可多选）" />
+          <input id="labels-file" type="file" accept=".json,.jsonl" title="导入个人标注结果 JSON" style="display:none" />
+          <button id="import-labels" type="button" title="恢复/合并个人标注到当前槽位">导入标注</button>
+          <button id="reload-all" type="button" title="重新从 data/cleaned/sessions.jsonl 加载全部会话">加载全库</button>
+        </div>
+        <div class="tool-group">
+          <button id="export-labels" class="primary" type="button" title="导出当前标注员的完整标记结果（交接只用这一份）">导出我的标注</button>
+          <button id="export-xlsx" type="button" title="导出已标注行到 Excel（含完整 prompt）">导出 Excel</button>
+          <button id="export-jsonl" type="button" title="导出已标注行到 JSONL（含完整 prompt）">导出 JSONL</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <section class="left-stack">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>会话</h2>
+            <div class="head-actions">
+              <button id="prev-session" class="chip-btn" type="button">上 [</button>
+              <button id="next-session" class="chip-btn" type="button">下 ]</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="filters">
+              <select id="filter">
+                <option value="all">全部</option>
+                <option value="unlabeled">未标完</option>
+                <option value="labeled">已标完</option>
+              </select>
+              <input id="search" type="search" placeholder="搜索 session" />
+            </div>
+            <div id="session-list" class="session-list"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>User prompts</h2></div>
+          <div class="panel-body"><div id="prompt-list" class="prompt-list"></div></div>
+        </div>
+
+        <div class="panel label-panel-wrap">
+          <div class="panel-head"><h2>意图分类</h2></div>
+          <div class="panel-body" id="label-panel"></div>
+        </div>
+      </section>
+
+      <section class="panel thread-panel">
+        <div class="nav-strip">
+          <div class="nav-actions">
+            <button id="prev-prompt" type="button">上一条</button>
+            <button id="next-prompt" type="button">下一条</button>
+            <button id="next-unlabeled" class="primary" type="button">下一条未标注</button>
+          </div>
+          <div class="nav-toggles">
+            <label><input id="focus-current" type="checkbox" checked /> 只看当前</label>
+            <label><input id="hide-nonuser" type="checkbox" /> 只看 User</label>
+            <label><input id="render-math" type="checkbox" checked /> Markdown/LaTeX</label>
+          </div>
+        </div>
+        <div class="thread" id="thread"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./vendor/katex/katex.min.js?v=2"></script>
+  <script src="./vendor/katex/auto-render.min.js?v=2"></script>
+  <script src="./vendor/marked.min.js?v=2"></script>
+  <script src="./vendor/xlsx.full.min.js?v=2"></script>
+  <!-- Full corpus is streamed from sessions.jsonl on startup; sample JS is offline fallback only -->
+  <script src="../data/cleaned/sessions_sample100.js?v=2"></script>
+  <script src="./taxonomy.js?v=2"></script>
+  <script src="./app.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿missing_resp 15
+sessions_not_in_cleaned 9
+sessions_in_cleaned 0
+empty 0
+sid e4ae4e4e-020f-44b3-90ad-99928877fe07 users 2 user_prompt 0 asst_resp 2
+sid 8f7f0618-9b2a-4cb1-ad92-8835fb4965e0 users 1 user_prompt 0 asst_resp 1
+sid fba0957c-d945-4379-b048-684ca5c2c069 users 1 user_prompt 0 asst_resp 1
+sid c7344a85-36a9-4ed1-9273-ab1f3150606f users 2 user_prompt 0 asst_resp 3
+sid e04a91df-c5cd-45f2-b8cb-a33e4dda59a0 users 2 user_prompt 0 asst_resp 2
+sid 2026-01-19-1b3e6441-62e3-4b41-8a0c-9d252f531f7a users 1 user_prompt 0 asst_resp 1
+sid 292faa9d-a2f5-4821-92ff-a157459c45a2 users 1 user_prompt 0 asst_resp 1
+sid 1c80158e-0e03-4266-a79d-ca68bd36bbc7 users 3 user_prompt 0 asst_resp 3
+sid 7d9856d9-7a59-4ae5-848a-e1aa1b2eec17 users 1 user_prompt 0 asst_resp 1

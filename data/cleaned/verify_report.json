@@ -1,0 +1,24 @@
+{
+  "rows_in": 11607572,
+  "sessions": 17560,
+  "user_prompts": 229909,
+  "role_counts": {
+    "user": 229909,
+    "assistant": 1037853
+  },
+  "assistant_response": 840026,
+  "assistant_thinking": 197374,
+  "sessions_with_assistant": 16844,
+  "sessions_without_assistant": 716,
+  "empty_assistant_turns": 0,
+  "short_assistant_turns_lt20": 13189,
+  "parquet_assistant_response": 849938,
+  "parquet_assistant_thinking": 555514,
+  "parquet_assistant_response_nonempty": 842383,
+  "parquet_assistant_thinking_nonempty": 198467,
+  "assistant_response_coverage_vs_nonempty": 0.9972,
+  "assistant_thinking_coverage_vs_nonempty": 0.9945,
+  "note": "Empty assistant_thinking/response in parquet are skipped by design.",
+  "import_mode": "assistant_full",
+  "source": "conversations.parquet (updated ~6.4GB)"
+}
