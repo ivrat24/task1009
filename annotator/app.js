@@ -33,7 +33,8 @@
     labels: {},
     filter: "all", // all | unlabeled | labeled
     hideNonUser: false,
-    focusCurrent: localStorage.getItem("ir02.focusCurrent") !== "0",
+    // Default OFF so the full user↔agent thread is visible; opt-in via「只看当前轮」.
+    focusCurrent: localStorage.getItem("ir02.focusCurrent") === "1",
     search: "",
     renderMath: localStorage.getItem("ir02.renderMath") !== "0",
     lastImportReport: null,
@@ -490,6 +491,8 @@
       labeled_at: new Date().toISOString(),
     };
     saveLabels();
+    const labeledNow = stats().labeled;
+    maybeCelebrateMilestone(labeledNow);
     if (advance) {
       const items = filteredSessions();
       const prompts = currentPrompts();
@@ -504,6 +507,47 @@
       }
     }
     render({ scrollCurrent: true });
+  }
+
+  const MILESTONE_N = 200;
+
+  function milestoneKey() {
+    return `ir02.milestone${MILESTONE_N}:${state.annotator || "A"}`;
+  }
+
+  function maybeCelebrateMilestone(labeledCount) {
+    if (labeledCount < MILESTONE_N) return;
+    if (localStorage.getItem(milestoneKey()) === "1") return;
+    localStorage.setItem(milestoneKey(), "1");
+    showMilestoneSplash(MILESTONE_N);
+  }
+
+  function showMilestoneSplash(n) {
+    const old = document.getElementById("milestone-splash");
+    if (old) old.remove();
+
+    const overlay = document.createElement("div");
+    overlay.id = "milestone-splash";
+    overlay.className = "milestone-splash";
+    overlay.innerHTML = `
+      <div class="milestone-card">
+        <div class="milestone-kicker">IR-02</div>
+        <div class="milestone-title">标到 ${n} 个了</div>
+        <div class="milestone-sub">已完成 ${n} 条 User prompt 意图标注</div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    // Force layout so enter transition runs.
+    overlay.offsetHeight;
+    overlay.classList.add("is-in");
+
+    const dismiss = () => {
+      overlay.classList.remove("is-in");
+      overlay.classList.add("is-push-up");
+      window.setTimeout(() => overlay.remove(), 520);
+    };
+    overlay.addEventListener("click", dismiss, { once: true });
+    window.setTimeout(dismiss, 1600);
   }
 
   function clearLabel() {
@@ -624,6 +668,23 @@
     $("clear").onclick = clearLabel;
   }
 
+  /** Turns belonging to the current prompt's local exchange (prev agent…user…next agent). */
+  function focusWindowIds(turns, current) {
+    if (!current) return null;
+    const curIdx = turns.findIndex((t) => t.turn_id === current.turn_id);
+    if (curIdx < 0) return new Set([current.turn_id]);
+    const ids = new Set([turns[curIdx].turn_id]);
+    for (let i = curIdx + 1; i < turns.length; i++) {
+      if (isLabelable(turns[i])) break;
+      ids.add(turns[i].turn_id);
+    }
+    for (let i = curIdx - 1; i >= 0; i--) {
+      if (isLabelable(turns[i])) break;
+      ids.add(turns[i].turn_id);
+    }
+    return ids;
+  }
+
   function renderThread(opts = {}) {
     const session = currentSession();
     const current = currentPrompt();
@@ -635,17 +696,19 @@
     box.replaceChildren();
     box.classList.toggle("focus-current", !!state.focusCurrent);
     const turns = session.turns || [];
+    const winIds = state.focusCurrent ? focusWindowIds(turns, current) : null;
     let rendered = 0;
     for (const turn of turns) {
       if (state.hideNonUser && turn.role !== "user") continue;
       const role = turn.role || "system";
       const isCurrent = current && turn.turn_id === current.turn_id;
-      // Focus mode: mount only the current user prompt so the pane shows its full text.
-      if (state.focusCurrent && !isCurrent) continue;
+      const inFocusWin = !winIds || winIds.has(turn.turn_id);
+      // Focus mode: keep the current user prompt together with adjacent agent turns.
+      if (state.focusCurrent && !inFocusWin) continue;
       const lab = role === "user" ? labelOf(turn.turn_id) : null;
 
       const bubble = document.createElement("div");
-      bubble.className = `bubble ${role}${isCurrent ? " current" : ""}`;
+      bubble.className = `bubble ${role}${isCurrent ? " current" : ""}${inFocusWin ? " focus-win" : ""}`;
       bubble.dataset.tid = String(turn.turn_id || "");
 
       const who = document.createElement("div");

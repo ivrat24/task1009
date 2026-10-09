@@ -6,7 +6,7 @@
   <title>IR-02 · User Prompt 意图打标（双人双机）</title>
   <!-- All assets are local under ./vendor for offline / portable transfer -->
   <link rel="stylesheet" href="./vendor/katex/katex.min.css?v=2" />
-  <link rel="stylesheet" href="./styles.css?v=12" />
+  <link rel="stylesheet" href="./styles.css?v=14" />
 </head>
 <body>
   <div class="app">
@@ -84,7 +84,7 @@
             <button id="next-unlabeled" class="primary" type="button">下一条未标注</button>
           </div>
           <div class="nav-toggles">
-            <label><input id="focus-current" type="checkbox" checked /> 只看当前</label>
+            <label><input id="focus-current" type="checkbox" /> 只看当前轮（含 Agent）</label>
             <label><input id="hide-nonuser" type="checkbox" /> 只看 User</label>
             <label><input id="render-math" type="checkbox" checked /> Markdown/LaTeX</label>
           </div>
@@ -101,6 +101,6 @@
   <!-- Full corpus is streamed from sessions.jsonl on startup; sample JS is offline fallback only -->
   <script src="../data/cleaned/sessions_sample100.js?v=2"></script>
   <script src="./taxonomy.js?v=2"></script>
-  <script src="./app.js?v=12"></script>
+  <script src="./app.js?v=14"></script>
 </body>
 </html>
